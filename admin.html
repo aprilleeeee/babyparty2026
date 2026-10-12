@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin · Baby Voting Pool</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="index.html">Baby Voting Pool</a><nav><a href="index.html">Public page</a></nav></div></header>
+<main class="wrap admin">
+  <section id="login-card" class="card"><h1>Admin login</h1><form id="login-form"><label>Email<input id="email" type="email" required></label><label>Password<input id="password" type="password" required></label><button class="button">Log in</button><p id="login-error" class="error"></p></form></section>
+  <div id="dashboard" class="hidden">
+    <section class="hero compact"><p class="eyebrow">Admin dashboard</p><h1>Manage the pool</h1><button id="logout" class="button secondary">Log out</button></section>
+    <section class="stats" id="stats"></section>
+    <section class="card"><div class="toolbar"><h2>Settings</h2><button id="refresh" class="button secondary">Refresh</button></div><div class="settings-grid"><label class="check"><input type="checkbox" id="voting-open"> Voting open</label><label class="check"><input type="checkbox" id="revealed"> Results revealed</label><label>Actual gender (only used after reveal)<select id="actual-gender"><option value="">Not set</option><option>Boy</option><option>Girl</option></select></label><button id="save-settings" class="button">Save settings</button></div></section>
+    <section class="card"><div class="toolbar"><h2>Entries</h2><input id="search" placeholder="Search name or vote ID"></div><div class="table-wrap"><table><thead><tr><th>Vote ID</th><th>Name</th><th>Vote</th><th>Paid</th><th>Created</th><th></th></tr></thead><tbody id="entries"></tbody></table></div></section>
+  </div>
+</main>
+<script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Baby Voting Pool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="#vote">Baby Voting Pool</a><nav><a href="#vote">Vote</a><a href="#leaderboard">Leaderboard</a><a href="#results">Results</a><a href="admin.html">Admin</a></nav></div></header>
+<main class="wrap">
+  <section id="vote" class="hero">
+    <p class="eyebrow">A little guessing game</p><h1>Will baby be a boy or a girl?</h1>
+    <p class="sub">RM10 per entry. Payment is collected offline by the organiser.</p>
+  </section>
+  <section class="card" id="voting-card">
+    <h2>Cast your vote</h2>
+    <div id="closed" class="notice hidden"></div>
+    <form id="vote-form">
+      <label>Your name<input id="name" required maxlength="80" autocomplete="name"></label>
+      <div class="choice-grid">
+        <label class="choice"><input type="radio" name="gender" value="Boy" required><span>👦</span><b>Boy</b></label>
+        <label class="choice"><input type="radio" name="gender" value="Girl" required><span>👧</span><b>Girl</b></label>
+      </div>
+      <label class="check"><input type="checkbox" id="privacy" required> I understand my name and vote may appear on the leaderboard.</label>
+      <button class="button" type="submit">Submit vote</button>
+    </form>
+    <div id="confirmation" class="confirmation hidden"></div>
+  </section>
+  <section class="card" id="leaderboard"><h2>Who voted for what?</h2><div id="leaderboard-list" class="list"></div></section>
+  <section class="card" id="results"><h2>Voting results</h2><div id="results-content"></div></section>
+</main>
+<footer><div class="wrap">RM10 per entry · Offline payment collection</div></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
